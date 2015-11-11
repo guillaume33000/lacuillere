@@ -1,17 +1,20 @@
 Rails.application.routes.draw do
-  get 'reviews/new'
+  root to: 'restaurants#index'
 
-  get 'reviews/create'
+  # get 'reviews/new'
 
-  get 'restaurants/index'
+  # get 'reviews/create'
 
-  get 'restaurants/new'
+  # get 'restaurants/index'
 
-  get 'restaurants/create'
+  # get 'restaurants/new'
 
-  get 'restaurants/show'
+  # get 'restaurants/create'
+
+  # get 'restaurants/show'
 
   resources :restaurants do
     resources :reviews, only: [:new, :create]
   end
+
 end
