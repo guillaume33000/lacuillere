@@ -3,5 +3,5 @@ class Review < ActiveRecord::Base
   validates :content, presence: true
   validates :rating, presence: true, :numericality => {:only_integer => true}
   validates_inclusion_of :rating, :in => (0..5)
-  validates_associated :restaurants
+  validates_associated :restaurant
 end

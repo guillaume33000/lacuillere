@@ -4,4 +4,9 @@ class Restaurant < ActiveRecord::Base
   validates :address, presence: true
   validates :category, presence: true
   validates_inclusion_of :category, :in => ["italian", "french", "japanese", "chinese", "belgian"]
+
+def categories
+  ["chinese", "japanese", "italian", "french", "belgian"]
+end
+
 end
